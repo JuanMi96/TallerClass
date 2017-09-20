@@ -32,6 +32,7 @@ public class Music extends javax.swing.JFrame {
         album = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         Reproducir = new javax.swing.JButton();
+        tantan = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,6 +53,11 @@ public class Music extends javax.swing.JFrame {
         jLabel2.setText("     Album");
 
         Reproducir.setText("Reproducir");
+        Reproducir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ReproducirMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,8 +74,13 @@ public class Music extends javax.swing.JFrame {
                         .addGap(13, 13, 13)))
                 .addGap(63, 63, 63))
             .addGroup(layout.createSequentialGroup()
-                .addGap(159, 159, 159)
-                .addComponent(Reproducir)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(Reproducir))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(103, 103, 103)
+                        .addComponent(tantan, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -88,7 +99,9 @@ public class Music extends javax.swing.JFrame {
                     .addComponent(cancion, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addComponent(Reproducir)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addGap(38, 38, 38)
+                .addComponent(tantan, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
+                .addGap(33, 33, 33))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(38, 38, 38)
@@ -106,6 +119,14 @@ public class Music extends javax.swing.JFrame {
     private void albumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_albumActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_albumActionPerformed
+
+    private void ReproducirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReproducirMouseClicked
+        // TODO add your handling code here:
+        
+        
+        
+        
+    }//GEN-LAST:event_ReproducirMouseClicked
 
     /**
      * @param args the command line arguments
@@ -149,5 +170,6 @@ public class Music extends javax.swing.JFrame {
     private javax.swing.JTextField cancion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField tantan;
     // End of variables declaration//GEN-END:variables
 }
